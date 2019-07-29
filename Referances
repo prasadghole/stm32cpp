@@ -1,2 +1,4 @@
 1. GDB Server https://www.st.com/content/ccc/resource/technical/document/user_manual/group1/de/c1/e6/3d/89/18/4c/90/DM00613038/files/DM00613038.pdf/jcr:content/translations/en.DM00613038.pdf
 2. Hardware setup https://embedded-boston.github.io/tutorial-bring-and-blink-rust/03-setup/verify.html
+3. ST-LINK https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stsw-link004.html
+4. ST-link usb driver https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.license=1564137466456.product=STSW-LINK009.version=2.0.1.html
