@@ -1,0 +1,29 @@
+#+Title: Embedded C++ with STM32 microcontrollers
+# +Author: Prasad Ghole
+#+Email: prasad.ghole@ltts.com
+#+REVEAL_ROOT: http://cdn.jsdelivr.net/reveal.js/3.0.0/ 
+#+REVEAL_THEME: night
+#+OPTIONS: toc:nil num:nil timestamp:nil 
+
+* Setup
+* Installing cross compiler
+1. Go to the https://developer.arm.com 
+2. Click on Tools and software >> Open source Software >> GNU toolchain
+3. Downlaod ARM GNU embedded toolchain as per your host platform (only 32 bit toolchains are available now)
+https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
+
+* STM32F103 board
+** Evaluation firmware
+https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubef4.license=1562567706435.product=STM32CubeF4.version=1.24.0.html
+https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubef7.html#resource
+
+* stlink 
+** WARNING
+Please make sure not to connect both external 5 volts power supply and USB power supply at same time.
+* Debug Server 
+** OpenOCD
+** GDB Server
+* libopencm3 or STM HAL
+
+
+* Hello World
