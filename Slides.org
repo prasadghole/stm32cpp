@@ -20,10 +20,23 @@ https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedd
 * stlink 
 ** WARNING
 Please make sure not to connect both external 5 volts power supply and USB power supply at same time.
+** ST link usb drive
+Download usb driver from 
+https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.license=1564137466456.product=STSW-LINK009.version=2.0.1.html
+ Run stlink_winusb_install batch file to install driver.
+** ST link utilities
+Download st link utility from 
+https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-programmers/stsw-link004.html
+
 * Debug Server 
 ** OpenOCD
 ** GDB Server
 * libopencm3 or STM HAL
 
 
+* STM32Cube Project
+1. Create STM32Cube project
+2. Select board 
+3. Give project Name
+4. Select target C++
 * Hello World
