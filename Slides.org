@@ -40,3 +40,5 @@ https://my.st.com/content/my_st_com/en/products/development-tools/software-devel
 3. Give project Name
 4. Select target C++
 * Hello World
+* C++ 14 
+C++ standard evolved more rapidly after release of 2011
