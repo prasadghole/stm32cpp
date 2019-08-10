@@ -5,6 +5,8 @@ This file stores information and referance needed for training.
 ** gcc vs g++
 gcc compiles c and C++ as per there extension but links against standard C libraries. 
 By compiling with g++ program will link against std C++ libraries irresprice of file extension.
+** Floating point
+All source code should follow same floating point ABI. When mixing C and C++ I adjusted them.
 * Libraries
 ** Standard libraries
 Keil library documentation
@@ -13,3 +15,4 @@ A program which uses main causes inclusion of standard c library functions rt_li
 ** Tailoring input output
 Tailoring can be done by low level library function or system io function.
 http://www.keil.com/support/man/docs/armlib/armlib_chr1358938930366.htm
+
