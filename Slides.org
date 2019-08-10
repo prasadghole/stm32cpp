@@ -18,6 +18,8 @@ Command line tools also helps in build automation.
 3. Downlaod ARM GNU embedded toolchain as per your host platform (only 32 bit toolchains are available now)
 https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads
 
+* Verify installation
+  
 * STM32F103 board
 ** Evaluation firmware
 https://my.st.com/content/my_st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32cube-mcu-mpu-packages/stm32cubef4.license=1562567706435.product=STM32CubeF4.version=1.24.0.html
@@ -71,3 +73,21 @@ Linker scripts describes the
 *** Debug
 * C++ 14 
 C++ standard evolved more rapidly after release of 2011
+* Use namespece
+Explain how we can use namespace to simplify naming of common static functions.
+#+SRC_BEGIN C++
+
+#+SRC_END
+
+* static asserts 
+This will help in compile time catching of errors.
+* Mixing C and C++  libraries 
+* Referances
+** Gnu C 
+*** Predefined macros
+https://gcc.gnu.org/onlinedocs/cpp/Common-Predefined-Macros.html
+** Keil library
+*** run time library support 
+http://www.keil.com/support/man/docs/armlib/armlib_chr1358938908603.htm
+
+C++ libraries need C libraries for target specific support.
