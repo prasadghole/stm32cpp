@@ -5,16 +5,21 @@
 
 #include "Uart.h"
 
-Uart::Uart() : m_uartinstance(USART3) , baudrate(115200), bits(8), parity(0), stopbit(1), flowcontrol(0)
+stm32f767::Uart::Uart() : m_uartinstance(USART3) , baudrate(115200), bits(8), parity(0), stopbit(1), flowcontrol(0)
 {
 }
 
-bool Uart::Initialize()
+stm32f767::Uart::Uart(USART_TypeDef * instance,uint32_t baudrate, uint32_t bits, uint32_t parity, uint32_t stopbit,
+		uint32_t flowcontrol): m_uartinstance(instance),baudrate(baudrate), bits(bits), parity(parity), stopbit(stopbit), flowcontrol(flowcontrol)
+{
+}
+
+bool stm32f767::Uart::Initialize()
 {
 	return this->Init(this->m_uartinstance,this->baudrate,this->bits,this->parity,this->stopbit,this->flowcontrol);
 }
 
-bool Uart::Init(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32_t parity, uint32_t stopbit,uint32_t flowcontrol)
+bool stm32f767::Uart::Init(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32_t parity, uint32_t stopbit,uint32_t flowcontrol)
 {
 	bool bretVal = true;
 
@@ -58,7 +63,7 @@ bool Uart::Init(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32
 	 return bretVal;
 }
 
-bool Uart::Transmit(uint8_t * buffer) {
+bool stm32f767::Uart::Transmit(uint8_t * buffer) {
 
 	bool bretVal = true;
 	 LL_USART_TransmitData8(this->m_uartinstance, buffer[0]);

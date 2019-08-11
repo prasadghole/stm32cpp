@@ -10,6 +10,7 @@
 extern "C" {
 #endif /* __cplusplus */
 
+  namespace stm32f767 {
 #include "stm32f7xx_ll_bus.h"
 #include "stm32f7xx_ll_rcc.h"
 #include "stm32f7xx_ll_system.h"
@@ -20,9 +21,12 @@ extern "C" {
 #include "stm32f7xx_ll_usart.h"
 #include "stm32f7xx_ll_pwr.h"
 
+
 class Uart {
 public:
 	Uart();
+	Uart(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32_t parity, uint32_t stopbit,uint32_t flowcontrol);
+
 	bool Initialize();
 	bool Transmit(uint8_t * buffer);
 private:
@@ -101,6 +105,7 @@ private:
                                                 } while(0)
 #define USER_BUTTON_IRQHANDLER                  EXTI15_10_IRQHandler
 
+}
 
 #ifdef __cplusplus
 }

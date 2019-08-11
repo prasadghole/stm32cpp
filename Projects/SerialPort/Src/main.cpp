@@ -12,7 +12,8 @@
 
 void SystemClock_Config(void);
 static void CPU_CACHE_Enable(void);
-static Uart Uart3;
+//static Uart Uart3(USART3, 9600, 8, 0, 1, 0);
+static stm32f767::Uart Uart3;
 
 //static uint8_t * HelloString = (uint8_t *) __TIME__;
 static uint8_t * HelloString = (uint8_t *) "Hello World";
