@@ -16,7 +16,7 @@ static void CPU_CACHE_Enable(void);
 static void Error_Handler(void);
 static Uart Uart3;
 
-static uint8_t * HelloString = (uint8_t *) "Hello This is transmitted by class Uart ";
+static uint8_t * HelloString = (uint8_t *) __TIME__;
 
 /**
   * @brief  Main program
