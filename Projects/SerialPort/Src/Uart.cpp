@@ -5,12 +5,17 @@
 
 #include "Uart.h"
 
-
-Uart::Uart() : m_uartinstance(USART3)
+Uart::Uart() : m_uartinstance(USART3) , baudrate(115200), bits(8), parity(0), stopbit(1), flowcontrol(0)
 {
 }
 
-bool Uart::Inialize(void) {
+bool Uart::Initialize()
+{
+	return this->Init(this->m_uartinstance,this->baudrate,this->bits,this->parity,this->stopbit,this->flowcontrol);
+}
+
+bool Uart::Init(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32_t parity, uint32_t stopbit,uint32_t flowcontrol)
+{
 	bool bretVal = true;
 
 	/* (1) Enable GPIO clock and configures the USART pins *********************/
@@ -40,35 +45,15 @@ bool Uart::Inialize(void) {
 
 	  /* (3) Configure USART functional parameters ********************************/
 
-	  /* Disable USART prior modifying configuration registers */
-	  /* Note: Commented as corresponding to Reset value */
-	  // LL_USART_Disable(USARTx_INSTANCE);
-
-	  /* TX/RX direction */
-	  LL_USART_SetTransferDirection(USARTx_INSTANCE, LL_USART_DIRECTION_TX_RX);
+	  LL_USART_SetTransferDirection(instance, LL_USART_DIRECTION_TX_RX);
 
 	  /* 8 data bit, 1 start bit, 1 stop bit, no parity */
-	  LL_USART_ConfigCharacter(USARTx_INSTANCE, LL_USART_DATAWIDTH_8B, LL_USART_PARITY_NONE, LL_USART_STOPBITS_1);
+	  LL_USART_ConfigCharacter(instance, LL_USART_DATAWIDTH_8B, parity, stopbit);
 
-	  /* No Hardware Flow control */
-	  /* Reset value is LL_USART_HWCONTROL_NONE */
-	  // LL_USART_SetHWFlowCtrl(USARTx_INSTANCE, LL_USART_HWCONTROL_NONE);
-
-	  /* Oversampling by 16 */
-	  /* Reset value is LL_USART_OVERSAMPLING_16 */
-	  // LL_USART_SetOverSampling(USARTx_INSTANCE, LL_USART_OVERSAMPLING_16);
-
-	  /* Set Baudrate to 115200 using APB frequency set to 216000000/APB_Div Hz */
-	  /* Frequency available for USART peripheral can also be calculated through LL RCC macro */
-	  /* Ex :
-	      Periphclk = LL_RCC_GetUSARTClockFreq(Instance); or LL_RCC_GetUARTClockFreq(Instance); depending on USART/UART instance
-
-	      In this example, Peripheral Clock is expected to be equal to 216000000/APB_Div Hz => equal to SystemCoreClock/APB_Div
-	  */
-	  LL_USART_SetBaudRate(USARTx_INSTANCE, SystemCoreClock/APB_Div, LL_USART_OVERSAMPLING_16, 115200);
+	  LL_USART_SetBaudRate(instance, SystemCoreClock/APB_Div, LL_USART_OVERSAMPLING_16, baudrate);
 
 	  /* (4) Enable USART *********************************************************/
-	  LL_USART_Enable(USARTx_INSTANCE);
+	  LL_USART_Enable(instance);
 
 	 return bretVal;
 }

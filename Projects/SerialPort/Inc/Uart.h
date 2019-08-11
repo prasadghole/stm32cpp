@@ -23,13 +23,16 @@ extern "C" {
 class Uart {
 public:
 	Uart();
-	bool Inialize(void);
+	bool Initialize();
 	bool Transmit(uint8_t * buffer);
 private:
 	USART_TypeDef * m_uartinstance;
-	//Temporaty to initialize using HAL we will get rid of it by using CMSIS API
-	//
-	UART_HandleTypeDef UartHandle;
+	uint32_t baudrate;
+	uint32_t bits;
+	uint32_t parity;
+	uint32_t stopbit;
+	uint32_t flowcontrol;
+	bool Init(USART_TypeDef * instance, uint32_t baudrate,uint32_t bits,uint32_t parity, uint32_t stopbit,uint32_t flowcontrol);
 };
 
 
