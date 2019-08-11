@@ -1,34 +1,77 @@
 /**
   ******************************************************************************
-  * @file    UART/UART_Printf/Inc/main.h
+  * @file    Examples_LL/USART/USART_Communication_Tx/Inc/main.h
   * @author  MCD Application Team
   * @brief   Header for main.c module
   ******************************************************************************
+  * @attention
+  *
+  * <h2><center>&copy; Copyright (c) 2016 STMicroelectronics.
+  * All rights reserved.</center></h2>
+  *
+  * This software component is licensed by ST under BSD 3-Clause license,
+  * the "License"; You may not use this file except in compliance with the
+  * License. You may obtain a copy of the License at:
+  *                        opensource.org/licenses/BSD-3-Clause
+  *
+  ******************************************************************************
   */
 
+/* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __MAIN_H
 #define __MAIN_H
 
-#include "stm32f7xx_hal.h"
-#include "stdio.h"
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f7xx_ll_bus.h"
+#include "stm32f7xx_ll_rcc.h"
+#include "stm32f7xx_ll_system.h"
+#include "stm32f7xx_ll_utils.h"
+#include "stm32f7xx_ll_cortex.h"
+#include "stm32f7xx_ll_gpio.h"
+#include "stm32f7xx_ll_exti.h"
+#include "stm32f7xx_ll_usart.h"
+#include "stm32f7xx_ll_pwr.h"
+#if defined(USE_FULL_ASSERT)
+#include "stm32_assert.h"
+#endif /* USE_FULL_ASSERT */
 
-/* Definition for USARTx clock resources */
-#define USARTx                           USART3
-#define USARTx_CLK_ENABLE()              __HAL_RCC_USART3_CLK_ENABLE();
-#define USARTx_RX_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOD_CLK_ENABLE()
-#define USARTx_TX_GPIO_CLK_ENABLE()      __HAL_RCC_GPIOD_CLK_ENABLE()
+/* Exported types ------------------------------------------------------------*/
+/* Exported constants --------------------------------------------------------*/
+#define APP_ERROR_NONE    0
+#define APP_ERROR_TIMEOUT 1
 
-#define USARTx_FORCE_RESET()             __HAL_RCC_USART3_FORCE_RESET()
-#define USARTx_RELEASE_RESET()           __HAL_RCC_USART3_RELEASE_RESET()
+/* Define used to enable time-out management*/
+#define USE_TIMEOUT       0
 
-/* Definition for USARTx Pins */
-#define USARTx_TX_PIN                    GPIO_PIN_8
-#define USARTx_TX_GPIO_PORT              GPIOD
-#define USARTx_TX_AF                     GPIO_AF7_USART3
-#define USARTx_RX_PIN                    GPIO_PIN_9
-#define USARTx_RX_GPIO_PORT              GPIOD
-#define USARTx_RX_AF                     GPIO_AF7_USART3
 
+/**
+  * @brief LED1
+  */
+
+#define LED1_PIN                           LL_GPIO_PIN_0
+#define LED1_GPIO_PORT                     GPIOB
+#define LED1_GPIO_CLK_ENABLE()             LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOB)
+
+/**
+  * @brief Toggle periods for various blinking modes
+  */
+
+#define LED_BLINK_FAST  200
+#define LED_BLINK_SLOW  500
+#define LED_BLINK_ERROR 1000
+
+
+/**
+  * @brief Key push-button
+  */
+
+
+/* Exported macro ------------------------------------------------------------*/
+
+/* Exported functions ------------------------------------------------------- */
+/* IRQ Handler treatment functions */
+void UserButton_Callback(void);
 
 #endif /* __MAIN_H */
 
+/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

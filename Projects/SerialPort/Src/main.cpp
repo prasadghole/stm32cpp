@@ -110,19 +110,7 @@ static void CPU_CACHE_Enable(void)
   SCB_EnableDCache();
 }
 
-/**
-  * @brief  This function is executed in case of error occurrence.
-  * @param  None
-  * @retval None
-  */
-static void Error_Handler(void)
-{
-  /* Turn LED3 on */
-  //BSP_LED_On(LED3);
-  while (1)
-  {
-  }
-}
+
 
 #ifdef  USE_FULL_ASSERT
 /**
