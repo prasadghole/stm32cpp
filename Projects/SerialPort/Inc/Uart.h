@@ -10,7 +10,6 @@
 extern "C" {
 #endif /* __cplusplus */
 
-  namespace stm32f767 {
 #include "stm32f7xx_ll_bus.h"
 #include "stm32f7xx_ll_rcc.h"
 #include "stm32f7xx_ll_system.h"
@@ -22,6 +21,7 @@ extern "C" {
 #include "stm32f7xx_ll_pwr.h"
 
 
+namespace stm32f767 {
 class Uart {
 public:
 	Uart();
