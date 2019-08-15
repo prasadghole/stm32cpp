@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspace>
+    <project>
+        <path>$WS_DIR$\HelloWorld.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\IARProjects\HelloWorld.ewp</path>
+    </project>
+    <project>
+        <path>$WS_DIR$\..\..\..\..\STM32Cube\Repository\STM32Cube_FW_F7_V1.15.0\Projects\STM32F767ZI-Nucleo\Examples\UART\UART_Printf\EWARM\Project.ewp</path>
+    </project>
+    <batchBuild />
+</workspace>
