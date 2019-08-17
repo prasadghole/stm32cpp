@@ -5,6 +5,9 @@
 #+REVEAL_THEME: night
 #+OPTIONS: toc:nil num:nil timestamp:nil 
 
+* Introduction
+C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
+object-oriented, and generic programming paradigms.
 * Setup
 * Why command line
 In the world of feature rich IDE many things are implicitly hidden from user. In order to understand details of firmware building 

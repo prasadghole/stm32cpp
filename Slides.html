@@ -1,0 +1,2106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>C++ Training</title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/reveal.css"/>
+
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/reveal.js/3.0.0/css/theme/night.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://cdn.jsdelivr.net/reveal.js/3.0.0/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">C++ Training</h1>
+</section>
+
+
+<section>
+<section id="slide-org37d1ab8">
+<h2 id="org37d1ab8">Introduction</h2>
+<p>
+C++ is a statically typed, compiled, general-purpose, case-sensitive, free-form programming language that supports procedural,
+object-oriented, and generic programming paradigms.
+</p>
+</section>
+<section id="slide-org49faf93">
+<h3 id="org49faf93">Standard</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-left">C++ Standard</th>
+<th scope="col" class="org-left">Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">1998</td>
+<td class="org-left">ISO/IEC 14882:1998</td>
+<td class="org-left">C++98</td>
+</tr>
+
+<tr>
+<td class="org-right">2003</td>
+<td class="org-left">ISO/IEC 14882:2003</td>
+<td class="org-left">C++03</td>
+</tr>
+
+<tr>
+<td class="org-right">2011</td>
+<td class="org-left">ISO/IEC 14882:2011</td>
+<td class="org-left">C++11</td>
+</tr>
+
+<tr>
+<td class="org-right">2014</td>
+<td class="org-left">ISO/IEC 14882:2014</td>
+<td class="org-left">C++14</td>
+</tr>
+
+<tr>
+<td class="org-right">2017</td>
+<td class="org-left">ISO/IEC 14882:2017</td>
+<td class="org-left">C++17</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org5138b5c">
+<h2 id="org5138b5c">Hello World</h2>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Used for output data to console</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Program starts here</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+     <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Display this message</span>
+     <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Expression</span>
+     <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Hello, world. "</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+     <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Program return successfully</span>
+     <span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Hello</td>
+<td class="org-left">world.</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org1478e1e">
+<h2 id="org1478e1e">History</h2>
+<p>
+C++ was developed by Bjarne Stroustrup starting in 1979 at Bell Labs in Murray Hill, New Jersey,
+as an enhancement to the C language and originally named C with Classes but later it was renamed 
+C++ in 1983.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgf537feb">
+<h2 id="orgf537feb">Setup</h2>
+<p>
+For windows we can download latest precompiled binaries for gcc tool chain at tdm-gcc.trdragon.org
+</p>
+
+
+</section>
+</section>
+<section>
+<section id="slide-orgd27d224">
+<h2 id="orgd27d224">Build Tools</h2>
+<p>
+gnu toolchain provide g++ command to build executable from source code.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-shell"><code trim>g++ Program.cpp
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org977555b">
+<h2 id="org977555b">Popular Tools</h2>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Tools</th>
+<th scope="col" class="org-left">Platforms</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Visual Studio</td>
+<td class="org-left">Windows</td>
+</tr>
+
+<tr>
+<td class="org-left">Xcode</td>
+<td class="org-left">Mac</td>
+</tr>
+
+<tr>
+<td class="org-left">CodeBlock</td>
+<td class="org-left">Windows</td>
+</tr>
+
+<tr>
+<td class="org-left">QT Creator</td>
+<td class="org-left">Windows, linux and Mac</td>
+</tr>
+
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+</section>
+<section>
+<section id="slide-org1d6d67d">
+<h2 id="org1d6d67d">Build Process</h2>
+<div class="outline-text-2" id="text-org1d6d67d">
+</div>
+</section>
+<section id="slide-org8d4a296">
+<h3 id="org8d4a296">Pre Processing</h3>
+</section>
+<section id="slide-orgb216467">
+<h3 id="orgb216467">Compiling</h3>
+<div class="org-src-container">
+
+<pre  class="src src-shell"><code trim>g++ --std=c++y hello.cpp -o hello.cpp
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgab5cf66">
+<h3 id="orgab5cf66">Linking</h3>
+<p>
+Converting C++ source code in machine language which can be exectured by underline microprocessor
+is called as build process.
+</p>
+</section>
+<section id="slide-org78c2870">
+<h3 id="org78c2870">Loading</h3>
+</section>
+<section id="slide-org27b4b23">
+<h3 id="org27b4b23">Execution</h3>
+</section>
+</section>
+<section>
+<section id="slide-org918d2f6">
+<h2 id="org918d2f6">Language Features</h2>
+<ol>
+<li>Statically typed</li>
+<li>Support procedural , object oriented and generic programming paradigms</li>
+<li>Compiled</li>
+<li>Versatile standard library</li>
+<li>Encapsulation</li>
+<li>Inheritance</li>
+<li>Polymorphism</li>
+
+</ol>
+
+</section>
+</section>
+<section>
+<section id="slide-orgafab2d2">
+<h2 id="orgafab2d2">Literals</h2>
+<p>
+Literals are tokens of C++ program that represent constant values embedded in source code.
+</p>
+</section>
+<section id="slide-orgf32fc57">
+<h4 id="orgf32fc57">Interger Literals</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Literal</th>
+<th scope="col" class="org-left">Desctiption</th>
+<th scope="col" class="org-right">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Decimal</td>
+<td class="org-left">non zero decimal digit followed by zero or more significant digit</td>
+<td class="org-right">42</td>
+</tr>
+
+<tr>
+<td class="org-left">Octal</td>
+<td class="org-left">digit zero followed by zero or more octal digits (0-7)</td>
+<td class="org-right">052</td>
+</tr>
+
+<tr>
+<td class="org-left">Hexadecimal</td>
+<td class="org-left">character sequence 0x or 0X followed by hex digits (0-9 , a-f)</td>
+<td class="org-right">0x2a</td>
+</tr>
+
+<tr>
+<td class="org-left">binary</td>
+<td class="org-left">character sequence 0b or 0B followed by binary digits (0,1)</td>
+<td class="org-right">0b101010</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Since 2014 you can use optinal single quotes (') as a serperator.
+Following variables are initialized for same values
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">unsigned</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #7590db;">l1</span> = <span style="color: #a45bad;">18446744073709550592ull</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">C++11</span>
+<span style="color: #ce537a; font-weight: bold;">unsigned</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #7590db;">l2</span> = <span style="color: #a45bad;">18</span>'<span style="color: #a45bad;">446</span>'<span style="color: #a45bad;">744</span>'<span style="color: #a45bad;">073</span>'<span style="color: #a45bad;">709</span>'<span style="color: #a45bad;">550</span>'<span style="color: #a45bad;">592llu</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">C++14</span>
+<span style="color: #ce537a; font-weight: bold;">unsigned</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #7590db;">l3</span> = <span style="color: #a45bad;">1844</span>'<span style="color: #a45bad;">6744</span>'<span style="color: #a45bad;">0737</span>'<span style="color: #a45bad;">0955</span>'<span style="color: #a45bad;">0592uLL</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">C++14</span>
+<span style="color: #ce537a; font-weight: bold;">unsigned</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #ce537a; font-weight: bold;">long</span> <span style="color: #7590db;">l4</span> = <span style="color: #a45bad;">184467</span>'<span style="color: #a45bad;">440737</span>'<span style="color: #a45bad;">0</span>'<span style="color: #a45bad;">95505</span>'<span style="color: #a45bad;">92LLU</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">C++14</span>
+</code></pre>
+</div>
+
+<p>
+Hexadecimal literals ending in e or E followed by + or - must be seperated from operator with white space.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #7590db;">x</span> = <span style="color: #a45bad;">0xE</span>+<span style="color: #a45bad;">2.0</span>;   <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">error</span>
+<span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #7590db;">y</span> = <span style="color: #a45bad;">0xa</span>+<span style="color: #a45bad;">2.0</span>;   <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">OK</span>
+<span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #7590db;">z</span> = <span style="color: #a45bad;">0xE</span> +<span style="color: #a45bad;">2.0</span>;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">OK</span>
+<span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #7590db;">q</span> = <span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0xE</span><span style="color: #4f97d7;">)</span>+<span style="color: #a45bad;">2.0</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">OK</span>
+</code></pre>
+</div>
+</section>
+<section id="slide-orga2f1527">
+<h4 id="orga2f1527">Integer suffix</h4>
+<p>
+u or U unsigned suffix
+ll or LL long long suffix
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"sizeof(123u) "</span> &lt;&lt; <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">123u</span><span style="color: #bc6ec5;">)</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"sizeof(123ul) "</span> &lt;&lt; <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">123ul</span><span style="color: #bc6ec5;">)</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"sizeof(123ull) "</span> &lt;&lt; <span style="color: #4f97d7; font-weight: bold;">sizeof</span><span style="color: #bc6ec5;">(</span><span style="color: #a45bad;">123ull</span><span style="color: #bc6ec5;">)</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7;">}</span> 
+
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">sizeof(123u)</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">sizeof(123ul)</td>
+<td class="org-right">4</td>
+</tr>
+
+<tr>
+<td class="org-left">sizeof(123ull)</td>
+<td class="org-right">8</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgb2f0e7f">
+<h3 id="orgb2f0e7f">Variable Type</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Category</th>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Meaning</th>
+<th scope="col" class="org-left">Example</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">boolean</td>
+<td class="org-left">bool</td>
+<td class="org-left">true or false</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Character</td>
+<td class="org-left">char</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Integer</td>
+<td class="org-left">short,int,long,long long</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">floating</td>
+<td class="org-left">float, double,long double</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">void</td>
+<td class="org-left">no type</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orga2d726a">
+<h3 id="orga2d726a">bool</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::boolalpha &lt;&lt; <span style="color: #a45bad;">true</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl; 
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::boolalpha &lt;&lt; <span style="color: #a45bad;">false</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+ <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::noboolalpha &lt;&lt; <span style="color: #a45bad;">true</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+ <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::noboolalpha &lt;&lt; <span style="color: #a45bad;">false</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7;">}</span> 
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">true</td>
+</tr>
+
+<tr>
+<td class="org-right">false</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgfb3024e">
+<h3 id="orgfb3024e">Variable initialization</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">Number_of_Employee</span> = <span style="color: #a45bad;">100</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Uniform initialization</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">Number_Of_Employee</span> = <span style="color: #4f97d7;">{</span><span style="color: #a45bad;">100</span><span style="color: #4f97d7;">}</span>;
+</code></pre>
+</div>
+</section>
+<section id="slide-org953288b">
+<h3 id="org953288b">Signed integer Data Types</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Size</th>
+<th scope="col" class="org-left">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">signed char</td>
+<td class="org-right">1</td>
+<td class="org-left">-128 to 127</td>
+</tr>
+
+<tr>
+<td class="org-left">short</td>
+<td class="org-right">2</td>
+<td class="org-left">-256 to 255</td>
+</tr>
+
+<tr>
+<td class="org-left">signed int</td>
+<td class="org-right">4</td>
+<td class="org-left">-2147483648 to 2147483647</td>
+</tr>
+
+<tr>
+<td class="org-left">long int</td>
+<td class="org-right">8</td>
+<td class="org-left">-9223372036854775808 to 9223372036854775807</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org6c28517">
+<h3 id="org6c28517">Signed and Unsigned</h3>
+<p>
+Below example shows behaviour when signed and unsigned values are mixed.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+<span style="color: #ce537a; font-weight: bold;">unsigned</span> <span style="color: #7590db;">u</span> = <span style="color: #a45bad;">20</span>;
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = -<span style="color: #a45bad;">42</span>;
+
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; i + i &lt;&lt; <span style="color: #a45bad;">std</span>::endl;;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; u + i &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7;">}</span> 
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-right">-84</td>
+</tr>
+
+<tr>
+<td class="org-right">4294967274</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-orgd2122d2">
+<h4 id="orgd2122d2">Activity 1</h4>
+<p>
+What will be output of this code ?
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+  <span style="color: #4f97d7; font-weight: bold;">for</span><span style="color: #bc6ec5;">(</span><span style="color: #ce537a; font-weight: bold;">signed</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">10</span>; i &gt;= <span style="color: #a45bad;">0</span> ; i++<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">{</span>
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; i &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+  <span style="color: #bc6ec5;">}</span> 
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org1352046">
+<h3 id="org1352046">Varible with fixed values</h3>
+</section>
+<section id="slide-org9a2166b">
+<h3 id="org9a2166b">Integer Literals</h3>
+</section>
+<section id="slide-org59901a4">
+<h3 id="org59901a4">Floating point Literals</h3>
+</section>
+<section id="slide-orgd5b5c24">
+<h3 id="orgd5b5c24">Character Literals</h3>
+</section>
+<section id="slide-orgc2244c5">
+<h3 id="orgc2244c5">Sting Literals</h3>
+</section>
+<section id="slide-org82765f4">
+<h3 id="org82765f4">Sizeof operator</h3>
+<p>
+Is used to obtain the number of bytes occupied by the type, variable or result of an expression.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org31c6c2a">
+<h2 id="org31c6c2a">Variables and Fundamental Data Types</h2>
+<p>
+A variable is a named piece of memory a programmer defines.
+Every variable has a type which defines what kind of data it can store.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgb07ae7e">
+<h2 id="orgb07ae7e">Complex Data Structure</h2>
+<div class="outline-text-2" id="text-orgb07ae7e">
+</div>
+</section>
+<section id="slide-org3445834">
+<h3 id="org3445834">Array</h3>
+</section>
+<section id="slide-orgd98d0fc">
+<h3 id="orgd98d0fc">String</h3>
+</section>
+<section id="slide-orga43b164">
+<h3 id="orga43b164">Structure</h3>
+</section>
+<section id="slide-orgc7592e9">
+<h3 id="orgc7592e9">Unions</h3>
+</section>
+<section id="slide-org4c92088">
+<h3 id="org4c92088">Enumerations</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org3e6c00a">
+<h2 id="org3e6c00a">Statements</h2>
+<div class="outline-text-2" id="text-org3e6c00a">
+</div>
+</section>
+<section id="slide-orgbf3ee40">
+<h3 id="orgbf3ee40">null statements</h3>
+<p>
+A simple with semicolon <b>;</b> is a null statement. Its useful in case we need statement but no program 
+logic. 
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #4f97d7; font-weight: bold;">while</span><span style="color: #4f97d7;">(</span>cin &gt;&gt; input &amp;&amp; input ~!= <span style="color: #2d9574;">"end"</span> <span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">{</span>
+    ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Do nothing</span>
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #4f97d7;">(</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">0</span>; i &lt; <span style="color: #a45bad;">100</span> ; i++<span style="color: #4f97d7;">)</span> ;
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">This count will never get increamented due to null statement </span>
+   count++ ;
+
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgb345970">
+<h2 id="orgb345970">Flow Control</h2>
+<div class="outline-text-2" id="text-orgb345970">
+</div>
+</section>
+<section id="slide-orgb229484">
+<h3 id="orgb229484">if</h3>
+</section>
+<section id="slide-org319063c">
+<h3 id="org319063c">while</h3>
+</section>
+<section id="slide-orgdd7b6c9">
+<h3 id="orgdd7b6c9">for</h3>
+</section>
+<section id="slide-org9cae0c4">
+<h3 id="org9cae0c4">switch</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgd832af4">
+<h2 id="orgd832af4">Operators</h2>
+<div class="outline-text-2" id="text-orgd832af4">
+</div>
+</section>
+<section id="slide-orgf69fbf9">
+<h3 id="orgf69fbf9">Arithmetic</h3>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operations</th>
+<th scope="col" class="org-left">Operators</th>
+<th scope="col" class="org-left">C++</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Addition</td>
+<td class="org-left">+</td>
+<td class="org-left">count + 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Subtraction</td>
+<td class="org-left">-</td>
+<td class="org-left">count - 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Multiplication</td>
+<td class="org-left">*</td>
+<td class="org-left">count * 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Division</td>
+<td class="org-left">/</td>
+<td class="org-left">count / 10</td>
+</tr>
+
+<tr>
+<td class="org-left">Reminder</td>
+<td class="org-left">%</td>
+<td class="org-left">count % 10</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Interger division always produce integer output for eg.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>  <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Used for output data to console</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Division 7/2 = "</span> &lt;&lt; <span style="color: #a45bad;">7</span>/<span style="color: #a45bad;">2</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Reminder 7%2 = "</span> &lt;&lt; <span style="color: #a45bad;">7</span>%<span style="color: #a45bad;">2</span> &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">0</span>;
+<span style="color: #4f97d7;">}</span>
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Division</td>
+<td class="org-right">7/2</td>
+<td class="org-left">=</td>
+<td class="org-right">3</td>
+</tr>
+
+<tr>
+<td class="org-left">Reminder</td>
+<td class="org-right">7%2</td>
+<td class="org-left">=</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org7dd4ef5">
+<h4 id="org7dd4ef5">Prcedence of arithmetic operators</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">order of evluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">()</td>
+<td class="org-left">Evaluated first.</td>
+</tr>
+
+<tr>
+<td class="org-left">* /  %</td>
+<td class="org-left">Evaluated second in left to right order</td>
+</tr>
+
+<tr>
+<td class="org-left">+  -</td>
+<td class="org-left">Evaluated last in left to right order</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="slide-org16184e5">
+<h3 id="org16184e5">Increament and Decreament</h3>
+<div class="outline-text-3" id="text-org16184e5">
+</div>
+</section>
+<section id="slide-orgb0e72c2">
+<h4 id="orgb0e72c2">Postfix Increament</h4>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">total</span> = <span style="color: #a45bad;">0</span>;
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">count</span> = <span style="color: #a45bad;">5</span>;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  count = total++  + <span style="color: #a45bad;">20</span>; 
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total  &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+  <span style="color: #4f97d7;">}</span>
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">5</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">20</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-orgb3cdc32">
+<h4 id="orgb3cdc32">Prefix Increament</h4>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">total</span> = <span style="color: #a45bad;">0</span>;
+   <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">count</span> = <span style="color: #a45bad;">5</span>;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  count = ++total+ <span style="color: #a45bad;">20</span>; 
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"count\t"</span> &lt;&lt; count &lt;&lt; <span style="color: #a45bad;">std</span>::endl &lt;&lt; <span style="color: #2d9574;">"total\t"</span> &lt;&lt; total  &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+  <span style="color: #4f97d7;">}</span>
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">5</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-left">count</td>
+<td class="org-right">21</td>
+</tr>
+
+<tr>
+<td class="org-left">total</td>
+<td class="org-right">1</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org3b3347a">
+<h4 id="org3b3347a">Prefer prefix over postfix</h4>
+<p>
+When postfix operator is used compiler must store original value , then perform operations and then increament. If
+we don't need unincreamented value this is costly operation.
+</p>
+
+</section>
+<section id="slide-orgca5dac7">
+<h3 id="orgca5dac7">Comparison</h3>
+<p>
+For various logical condition checking we need to compare to variables using comparison operator.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">Sample</th>
+<th scope="col" class="org-left">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">&gt;</td>
+<td class="org-left">x &gt; y</td>
+<td class="org-left">x is greater than y</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;</td>
+<td class="org-left">x &lt; y</td>
+<td class="org-left">x is less than y</td>
+</tr>
+
+<tr>
+<td class="org-left">&gt;=</td>
+<td class="org-left">x &gt;= y</td>
+<td class="org-left">x is greater or equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;=</td>
+<td class="org-left">x &lt;=y</td>
+<td class="org-left">x is less or equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">==</td>
+<td class="org-left">x == y</td>
+<td class="org-left">if x is equal to y</td>
+</tr>
+
+<tr>
+<td class="org-left">!=</td>
+<td class="org-left">x != y</td>
+<td class="org-left">if x is not equal to y</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Reversing order of operators may cause complier to emit syntax error. But some operator like != when 
+written like <code>! will be logical error.
+Also equality operator =</code> when written like = will be logical error.
+</p>
+</section>
+<section id="slide-orgbb00e4b">
+<h4 id="orgbb00e4b">Prcedence of comparison operators</h4>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Operator</th>
+<th scope="col" class="org-left">order of evluation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">()</td>
+<td class="org-left">Evaluated first.</td>
+</tr>
+
+<tr>
+<td class="org-left">* /  %</td>
+<td class="org-left">Evaluated second in left to right order</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt;&lt; &gt;&gt;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">&lt; &lt;= &gt; &gt;=</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left"><code>= !</code></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">=</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org8668e1a">
+<h3 id="org8668e1a">Bitwise</h3>
+<p>
+These operators allowes to manuplate individual bits of integer type variables.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">operation</th>
+<th scope="col" class="org-left">Operator</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">One's complement</td>
+<td class="org-left">~x</td>
+</tr>
+
+<tr>
+<td class="org-left">left shift</td>
+<td class="org-left">x &lt;&lt; y</td>
+</tr>
+
+<tr>
+<td class="org-left">right shift</td>
+<td class="org-left">x &gt;&gt; y</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise and</td>
+<td class="org-left">x &amp; y</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise or</td>
+<td class="org-left">x &vert; y</td>
+</tr>
+
+<tr>
+<td class="org-left">Bitwise Xor</td>
+<td class="org-left">x ^y</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org5fd7fae">
+<h3 id="org5fd7fae">logical Not Operator</h3>
+<p>
+Invert the truth value.
+</p>
+</section>
+<section id="slide-orgd6ad556">
+<h3 id="orgd6ad556">conditional</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #ce537a; font-weight: bold;">string</span> <span style="color: #7590db;">result</span> = <span style="color: #4f97d7;">(</span>marks &lt; <span style="color: #a45bad;">35</span> <span style="color: #4f97d7;">)</span> ? <span style="color: #2d9574;">"Fail"</span> : <span style="color: #2d9574;">"Pass"</span> ;
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3342e4d">
+<h2 id="org3342e4d">Iteration</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org0cc7e41">
+<h2 id="org0cc7e41">Functions</h2>
+<div class="outline-text-2" id="text-org0cc7e41">
+</div>
+</section>
+<section id="slide-org0c930df">
+<h3 id="org0c930df">Prototype</h3>
+</section>
+<section id="slide-org94172cb">
+<h3 id="org94172cb">Parameters</h3>
+</section>
+<section id="slide-org772ffbb">
+<h3 id="org772ffbb">inline</h3>
+</section>
+<section id="slide-org279231a">
+<h3 id="org279231a">Storage classes and scope</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-org8c7cfaf">
+<h2 id="org8c7cfaf">Header Files</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgac82b97">
+<h2 id="orgac82b97">Reference</h2>
+<p>
+  A referance is an alternate name for variable or object. All referance must be initialized. All operations performed 
+on refernces act on binded variable or object.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">original_var</span> = <span style="color: #a45bad;">10</span>;
+<span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">ref_var</span> = original_var;
+<span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">ref_lit</span> = <span style="color: #a45bad;">100</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Error can't refer to literal constant</span>
+<span style="color: #ce537a; font-weight: bold;">float</span> &amp;<span style="color: #7590db;">fref_var</span> = original_var;  <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Reference should be of same type</span>
+
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgfb0bbb5">
+<h2 id="orgfb0bbb5">Pointers</h2>
+<div class="outline-text-2" id="text-orgfb0bbb5">
+</div>
+</section>
+<section id="slide-org26ec1b5">
+<h3 id="org26ec1b5">references to pointers</h3>
+<p>
+A reference is not an object hence we may not have pointers to references but we can have reference to pointer.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+
+  <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">100</span>;
+  <span style="color: #ce537a; font-weight: bold;">int</span> *<span style="color: #7590db;">iptr</span> = &amp;i;
+  <span style="color: #ce537a; font-weight: bold;">int</span> *&amp;<span style="color: #7590db;">iptrref</span> = iptr;
+
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Value of i =\t "</span> &lt;&lt; i &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Value of i using poiner iptr =\t "</span> &lt;&lt; *iptr &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+  <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"Value of i using reference to pointer =\t "</span> &lt;&lt; *iptrref &lt;&lt; <span style="color: #a45bad;">std</span>::endl ;
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Value of i =</td>
+<td class="org-right">100</td>
+</tr>
+
+<tr>
+<td class="org-left">Value of i using poiner iptr =</td>
+<td class="org-right">100</td>
+</tr>
+
+<tr>
+<td class="org-left">Value of i using reference to pointer =</td>
+<td class="org-right">100</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org93b4c14">
+<h3 id="org93b4c14">nullptr</h3>
+</section>
+<section id="slide-org6181a74">
+<h3 id="org6181a74">Advice</h3>
+<p>
+Uninitalized pointers are very common cause of run time errors or program crashes. When an uninitialized pointer 
+is dereferanced it will cause run time error.
+If there is no way to have valid address to pointer then it should be initialized to <b>nullptr</b> 
+</p>
+</section>
+<section id="slide-orgca03dd4">
+<h3 id="orgca03dd4">void pointers</h3>
+<p>
+A void pointer is a special pointer which can hold the address of any object. But can't be used to operate on 
+object.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgf2fa6c0">
+<h2 id="orgf2fa6c0">Array</h2>
+<div class="outline-text-2" id="text-orgf2fa6c0">
+</div>
+</section>
+<section id="slide-orge139e5c">
+<h3 id="orge139e5c">Declaration</h3>
+<p>
+An array is a data structure used for storing collection of values having same data type and of fixed size.
+Number of elements in array must be known compile time hence shoulde be constant expression.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Declaration</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">myarray</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">3</span><span style="color: #4f97d7;">]</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">assignment </span>
+myarray<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">100</span>;
+myarray<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">1</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">200</span>;
+myarray<span style="color: #4f97d7;">[</span><span style="color: #a45bad;">2</span><span style="color: #4f97d7;">]</span> = <span style="color: #a45bad;">300</span>;
+
+</code></pre>
+</div>
+
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> *<span style="color: #7590db;">iptr</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">array of 10 pointers to integer</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">arr</span><span style="color: #4f97d7;">[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span> ; 
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #4f97d7;">(</span>*<span style="color: #7590db;">ptarr</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span> = &amp;arr ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">ptarr is pointer to array of 10 ints</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #4f97d7;">(</span>&amp;<span style="color: #7590db;">refarr</span><span style="color: #4f97d7;">)[</span><span style="color: #a45bad;">10</span><span style="color: #4f97d7;">]</span> = arr ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">refarr is referance to array of 10 int</span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org259e390">
+<h3 id="org259e390">Array element access</h3>
+<p>
+Individual array elements can be accessed using subscript <b>[]</b> operator.
+</p>
+</section>
+<section id="slide-orgf205b2a">
+<h3 id="orgf205b2a">Array and pointer</h3>
+<p>
+In C and C++ for most of cases pointers and array are interchangeble. 
+In most cases when we use array compiler most of time substitutes with pointer to first element.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">names</span><span style="color: #4f97d7;">[]</span> =  <span style="color: #2d9574;">"Hello World"</span>;
+
+<span style="color: #ce537a; font-weight: bold;">char</span> *<span style="color: #7590db;">c</span> = names; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">C points to H</span>
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgac48a70">
+<h3 id="orgac48a70">Array begin end</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">vector</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+    <span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">name</span><span style="color: #bc6ec5;">[]</span> =  <span style="color: #2d9574;">"Hello World"</span>;
+    <span style="color: #ce537a; font-weight: bold;">char</span> *<span style="color: #7590db;">start</span> = <span style="color: #a45bad;">std</span>::begin<span style="color: #bc6ec5;">(</span>name<span style="color: #bc6ec5;">)</span>;
+    <span style="color: #ce537a; font-weight: bold;">char</span> *<span style="color: #7590db;">end</span> = <span style="color: #a45bad;">std</span>::end<span style="color: #bc6ec5;">(</span>name<span style="color: #bc6ec5;">)</span>;
+
+    <span style="color: #4f97d7; font-weight: bold;">while</span> <span style="color: #bc6ec5;">(</span>start &lt; end<span style="color: #bc6ec5;">)</span>
+  <span style="color: #bc6ec5;">{</span>
+    <span style="color: #a45bad;">std</span>::cout &lt;&lt; *<span style="color: #2d9574;">(</span>start++<span style="color: #2d9574;">)</span> &lt;&lt; <span style="color: #2d9574;">" "</span> ;
+  <span style="color: #bc6ec5;">}</span>
+    <span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #4f97d7;">}</span>
+</code></pre>
+</div>
+
+
+
+</section>
+</section>
+<section>
+<section id="slide-org71dd9e1">
+<h2 id="org71dd9e1">struct</h2>
+</section>
+</section>
+<section>
+<section id="slide-org9dcddd3">
+<h2 id="org9dcddd3">enumerations</h2>
+<p>
+An enumeration is a distinct type whose values are restricated to range of integral values. 
+By default enumeration starts with 0 and increamented subsequently. but you can provide user defined values to 1 or more enumerations.
+We can have enumerations with same value. 
+</p>
+</section>
+<section id="slide-org0ba4e66">
+<h3 id="org0ba4e66">unscoped enumeration</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim> <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Enum with default values starting from 0 </span>
+<span style="color: #4f97d7; font-weight: bold;">enum</span> <span style="color: #ce537a; font-weight: bold;">colour</span> <span style="color: #4f97d7;">{</span><span style="color: #7590db;">red</span>,<span style="color: #7590db;">green</span>,<span style="color: #7590db;">blue</span><span style="color: #4f97d7;">}</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Enum with user defined value </span>
+<span style="color: #4f97d7; font-weight: bold;">enum</span> <span style="color: #ce537a; font-weight: bold;">types</span> <span style="color: #4f97d7;">{</span><span style="color: #7590db;">INT</span> = <span style="color: #a45bad;">32</span> , <span style="color: #7590db;">SHORT</span> = <span style="color: #a45bad;">16</span> , <span style="color: #7590db;">CHAR</span> = <span style="color: #a45bad;">8</span> , <span style="color: #7590db;">LONG</span> = <span style="color: #a45bad;">32</span><span style="color: #4f97d7;">}</span> 
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgcc5a00f">
+<h2 id="orgcc5a00f">scoped enumeration</h2>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span> 
+<span style="color: #4f97d7; font-weight: bold;">enum</span> <span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">grades</span> <span style="color: #4f97d7;">{</span> <span style="color: #7590db;">fail</span>,<span style="color: #7590db;">pass</span>, <span style="color: #7590db;">distinction</span><span style="color: #4f97d7;">}</span>;
+ <span style="color: #4f97d7; font-weight: bold;">enum</span> <span style="color: #ce537a; font-weight: bold;">types</span> <span style="color: #4f97d7;">{</span><span style="color: #7590db;">INT</span> = <span style="color: #a45bad;">32</span> , <span style="color: #7590db;">SHORT</span> = <span style="color: #a45bad;">16</span> , <span style="color: #7590db;">CHAR</span> = <span style="color: #a45bad;">8</span> , <span style="color: #7590db;">LONG</span> = <span style="color: #a45bad;">32</span><span style="color: #4f97d7;">}</span>; 
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span> 
+<span style="color: #4f97d7;">{</span>
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">ERROR can't convert to int implicitly as strongly typed enumeration </span>
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">std::cout  &lt;&lt; "Fail = \t " &lt;&lt; grades::fail &lt;&lt; std::endl; </span>
+<span style="color: #a45bad;">std</span>::cout  &lt;&lt; <span style="color: #2d9574;">"Size of INT in bits  = \t "</span> &lt;&lt; INT &lt;&lt; <span style="color: #a45bad;">std</span>::endl;<span style="color: #4f97d7;">}</span> 
+</code></pre>
+</div>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">Size of INT in bits  =</td>
+<td class="org-right">32</td>
+</tr>
+</tbody>
+</table>
+
+</section>
+<section id="slide-org0a398a5">
+<h3 id="org0a398a5">specifying enum size</h3>
+</section>
+<section id="slide-org0ae8190">
+<h3 id="org0ae8190">Enum as function parameter</h3>
+<p>
+Enum can be passed to function taking integer parameter but not otherway. When passed for int parameter enum is promoted to integer.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org7881d95">
+<h2 id="org7881d95">Type Alias</h2>
+<p>
+A type alias is a name that is synonym for other type. It helps to simplify complicated type definitions.
+We can use <b>typedef</b> keyword
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim>
+<span style="color: #4f97d7; font-weight: bold;">typedef</span> <span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #ce537a; font-weight: bold;">amount</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">amount is synonym for double</span>
+
+<span style="color: #ce537a; font-weight: bold;">using</span> <span style="color: #7590db;">amount</span> = <span style="color: #ce537a; font-weight: bold;">double</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">C++11</span>
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org56e131a">
+<h2 id="org56e131a">Implicit Type conversion</h2>
+<p>
+Conversions which are carried out by compiler without user intervention are called as implicit conversions.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">ivar</span> = <span style="color: #a45bad;">3.14</span> + <span style="color: #a45bad;">5</span> ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Result is 8 instead of 8.14 </span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org9972d28">
+<h3 id="org9972d28">Array to Pointer</h3>
+<p>
+This is implicit conversion where array will be converted to pointer to first element in array.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">str</span><span style="color: #4f97d7;">[]</span> = <span style="color: #2d9574;">"Hello World"</span> ;
+<span style="color: #ce537a; font-weight: bold;">char</span> *<span style="color: #7590db;">cptr</span> = str; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">cptr points to H str[0]</span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-orga3b23e9">
+<h3 id="orga3b23e9">Pointer to numric</h3>
+<p>
+A constant value of 0 and <b>nullptr</b> will be converted to pointer type.
+</p>
+</section>
+<section id="slide-orgc5712d6">
+<h3 id="orgc5712d6">bool</h3>
+<p>
+if value is 0 it will yeild boolean false.
+</p>
+</section>
+<section id="slide-orge0e3152">
+<h3 id="orge0e3152">const conversions</h3>
+<p>
+we can convert non constant type to corrsponding const type. 
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> &amp;j  = i; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">non const to reference to const </span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> *<span style="color: #7590db;">p</span> = &amp;i ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">address of non const to address of const</span>
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org85d98fd">
+<h2 id="org85d98fd">Explicite Type conversion</h2>
+<p>
+Need of type casting
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">10</span>;
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">j</span> = <span style="color: #a45bad;">3</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">int division with int produce int </span>
+<span style="color: #a45bad;">std</span>::cout  &lt;&lt; <span style="color: #2d9574;">"i / j =\t"</span> &lt;&lt; i / j &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+
+<p>
+To convert result to floating point number one of the operand should be of type float or double.
+Or shoudl be temporarly promoted to double uisng casting.
+</p>
+
+</section>
+<section id="slide-org2abe8c4">
+<h3 id="org2abe8c4">static cast</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">10</span>;
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">j</span> = <span style="color: #a45bad;">3</span>;
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">int division with int produce int </span>
+<span style="color: #a45bad;">std</span>::cout  &lt;&lt; <span style="color: #2d9574;">"i / j =\t"</span> &lt;&lt; <span style="color: #4f97d7; font-weight: bold;">static_cast</span><span style="color: #bc6ec5;">&lt;</span><span style="color: #ce537a; font-weight: bold;">double</span><span style="color: #bc6ec5;">&gt;(</span>i<span style="color: #bc6ec5;">)</span> / j &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org40f998d">
+<h3 id="org40f998d">const cast</h3>
+<p>
+const cast is used for cast away the constant ness of variable.
+only const cast can be used for remove const ness.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org14645f4">
+<h2 id="org14645f4">auto type specifier</h2>
+<p>
+compiler can auto deduce type based on evaluation of inital value.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #ce537a; font-weight: bold;">PI</span> = <span style="color: #a45bad;">3.14</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">PI is double </span>
+<span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #ce537a; font-weight: bold;">var</span> ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Error must have inital value</span>
+
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+    <span style="color: #ce537a; font-weight: bold;">char</span> <span style="color: #7590db;">name</span><span style="color: #bc6ec5;">[]</span> = <span style="color: #2d9574;">"Hello World"</span>;
+
+    <span style="color: #4f97d7; font-weight: bold;">for</span> <span style="color: #bc6ec5;">(</span> <span style="color: #4f97d7; font-weight: bold;">auto</span> <span style="color: #7590db;">c</span> : name<span style="color: #bc6ec5;">)</span>
+    <span style="color: #bc6ec5;">{</span>
+      <span style="color: #a45bad;">std</span>::cout &lt;&lt; c &lt;&lt; <span style="color: #2d9574;">""</span> ;
+    <span style="color: #bc6ec5;">}</span>
+<span style="color: #4f97d7;">}</span>
+
+
+
+</code></pre>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-orgbea505f">
+<h2 id="orgbea505f">decltype specifier</h2>
+<p>
+When we want compiler to deduce type from expression but don't want to use expression
+to initialize the variable, we can use <b>decltype</b> specifier.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">cint</span> = <span style="color: #a45bad;">0</span>;
+
+<span style="color: #bc6ec5; font-weight: bold;">decltype</span><span style="color: #4f97d7;">(</span>cint<span style="color: #4f97d7;">)</span> x = <span style="color: #a45bad;">100</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">x is const int</span>
+
+</code></pre>
+</div>
+
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #bc6ec5; font-weight: bold;">decltype</span><span style="color: #4f97d7;">(</span>x<span style="color: #4f97d7;">)</span> y ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">y has same type as x</span>
+decltype<span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span>x<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span> z ; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Error z is int&amp; hence must be initialized</span>
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org9a7c942">
+<h2 id="org9a7c942">Classes and Object</h2>
+<p>
+Object is any real world entity which has attributes, behaviour , state and identity.
+Compared to object is template or blueprint of object from which many objects can be created. 
+object is an instance of a class. 
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orge4aa0dd">
+<h2 id="orge4aa0dd">Constructor</h2>
+<div class="outline-text-2" id="text-orge4aa0dd">
+</div>
+</section>
+<section id="slide-org8a51ca3">
+<h3 id="org8a51ca3">Default</h3>
+</section>
+<section id="slide-orgb25a3d8">
+<h3 id="orgb25a3d8">Copy constructor</h3>
+</section>
+<section id="slide-org45b0164">
+<h3 id="org45b0164">initializer list</h3>
+</section>
+<section id="slide-orgae0cfe0">
+<h3 id="orgae0cfe0">Explicite</h3>
+</section>
+<section id="slide-org96d9cf1">
+<h3 id="org96d9cf1">Constructor delegation</h3>
+</section>
+<section id="slide-org21aa9cb">
+<h3 id="org21aa9cb">Default values to member</h3>
+</section>
+</section>
+<section>
+<section id="slide-org2c10c14">
+<h2 id="org2c10c14">Destructor</h2>
+<p>
+A destructor is a function that is called every time when an object is destroyed.
+Never thorow an exception in destructor. (destructors are implicitly defined as <b>noexcept</b>)
+If class contains virtual functions the destructor should be virtual.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org0598f80">
+<h2 id="org0598f80">Destructor</h2>
+</section>
+</section>
+<section>
+<section id="slide-org5adfd3e">
+<h2 id="org5adfd3e">static</h2>
+<div class="outline-text-2" id="text-org5adfd3e">
+</div>
+</section>
+<section id="slide-org75da2d2">
+<h3 id="org75da2d2">static data member</h3>
+<p>
+static member have only one copy for entire class. static members are shared by all class instances.
+static class members will be initialized out side class and will have life time of entier program.
+Use scope resolution operator to access static members of class.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Circle</span> <span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">public</span>:
+     <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">doubel</span> <span style="color: #7590db;">PI</span>;
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Initialization</span>
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">static keyword is only used in declaration and not in initialization</span>
+<span style="color: #ce537a; font-weight: bold;">double</span> <span style="color: #a45bad;">Circle</span>::<span style="color: #7590db;">PI</span> = <span style="color: #a45bad;">3.14F</span>;
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgfdaa99f">
+<h3 id="orgfdaa99f">static member functions</h3>
+<p>
+A function can be declared static it can <b>only</b> access static members. 
+</p>
+</section>
+<section id="slide-org28faf13">
+<h3 id="org28faf13">static local variable</h3>
+<p>
+Local variable inside function when declared constant preserve its value across multiple function call.
+function static variable have full life time but only visible in function scope.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">foo</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">callcounter</span> = <span style="color: #a45bad;">0</span>;
+callcounter++;
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org2fd7b2d">
+<h3 id="org2fd7b2d">static global</h3>
+<p>
+Variable declared outside function with static keyword has file scope but have full program lifetime.
+</p>
+</section>
+<section id="slide-orga793a45">
+<h3 id="orga793a45">In class initialization of static data members</h3>
+<p>
+static data members having const integral type or constexpr must be initialized when defined in class.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #4f97d7; font-weight: bold;">class</span> <span style="color: #ce537a; font-weight: bold;">Employee</span> <span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">public</span>:
+    <span style="color: #4f97d7; font-weight: bold;">static</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">retire_age</span> = <span style="color: #a45bad;">58</span>;
+
+<span style="color: #4f97d7;">}</span>
+<span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Must be defined without initialization</span>
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #a45bad;">Employee</span>::<span style="color: #7590db;">retire_age</span>; 
+
+
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-org2da7ce0">
+<h2 id="org2da7ce0">Member initializer list</h2>
+</section>
+</section>
+<section>
+<section id="slide-org9701ed6">
+<h2 id="org9701ed6">Inheritance</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgec07619">
+<h2 id="orgec07619">Interfaces</h2>
+</section>
+</section>
+<section>
+<section id="slide-org1beedec">
+<h2 id="org1beedec">const qualifier</h2>
+<p>
+const qualified variable value can't be changed. Because we can't change the value of const 
+variable it must be initialized when we create it.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">buffersize</span> = <span style="color: #a45bad;">100</span>;
+buffersize = <span style="color: #a45bad;">200</span> ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">ERROR can't change the value</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">length</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">ERROR must be initialize </span>
+</code></pre>
+</div>
+</section>
+<section id="slide-orga6176a8">
+<h3 id="orga6176a8">const objects scope</h3>
+<p>
+   By default all the const objects have local scope. Hence when we split program in multiple files.
+Every file that uses const must have initialzer which can have different value 
+</p>
+
+<p>
+In order to have single instance of const object shared across multiple file we should use qualifier <b>extern</b> 
+in both definition and declarations 
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">.CPP file definition</span>
+<span style="color: #4f97d7; font-weight: bold;">extern</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">buffersize</span> = <span style="color: #a45bad;">20</span>;
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">.h file declarations</span>
+<span style="color: #4f97d7; font-weight: bold;">extern</span> <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">buffersize</span>;
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org9968bbe">
+<h3 id="org9968bbe">Reference to cost</h3>
+<p>
+Reference to constant object can't be used to change object to which it refers to.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">cint</span> = <span style="color: #a45bad;">100</span>;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">refcint</span> = cint;
+<span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">refint</span> = cint; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">ERROR can't have non const reference to const objects</span>
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+<p>
+We can initialize a reference to const from any expression that can be converted to type of reference.
+We can bind reference to <b>const</b> to <b>nonconst</b> object or literal or expression.
+</p>
+
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #bc6ec5;">#include</span> <span style="color: #4f97d7;">&lt;</span><span style="color: #2d9574;">iostream</span><span style="color: #4f97d7;">&gt;</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #bc6ec5; font-weight: bold;">main</span><span style="color: #4f97d7;">()</span>
+<span style="color: #4f97d7;">{</span>
+
+<span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">i</span> = <span style="color: #a45bad;">42</span>;
+
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">r1</span> = i;
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">r2</span> = <span style="color: #a45bad;">43</span>; <span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">OK reference to const </span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">int</span> &amp;<span style="color: #7590db;">r3</span> = r1 * <span style="color: #a45bad;">2</span>;
+
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"r1 \t "</span> &lt;&lt; r1 &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"r2 \t "</span> &lt;&lt; r2 &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+<span style="color: #a45bad;">std</span>::cout &lt;&lt; <span style="color: #2d9574;">"r3 \t "</span> &lt;&lt; r3 &lt;&lt; <span style="color: #a45bad;">std</span>::endl;
+
+<span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">int &amp;r4 = 43; //ERROR non const reference to constant</span>
+<span style="color: #4f97d7;">}</span> 
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-org104d1a6">
+<h3 id="org104d1a6">Pointers and constant</h3>
+<div class="outline-text-3" id="text-org104d1a6">
+</div>
+</section>
+<section id="slide-org5b306ce">
+<h4 id="org5b306ce">Pointer to const</h4>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">float</span> <span style="color: #7590db;">PI</span> = <span style="color: #a45bad;">3.14</span>;
+<span style="color: #ce537a; font-weight: bold;">float</span> *<span style="color: #7590db;">ptr</span> = &amp;PI ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">ERROR ptr is non-const</span>
+<span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">float</span> *<span style="color: #7590db;">fptr</span> = &amp;PI ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Okay</span>
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org5149592">
+<h4 id="org5149592">Const pointer</h4>
+<p>
+A const pointer once initialized its value i.e. address is points to can't be changed. But we can change
+the value at location it points to.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #ce537a; font-weight: bold;">int</span> <span style="color: #7590db;">data</span> = <span style="color: #a45bad;">100</span>;
+<span style="color: #ce537a; font-weight: bold;">int</span> * <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #7590db;">cptr</span> = &amp;data;
+*cptr = <span style="color: #a45bad;">200</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Value points to can be changed</span>
+++cptr ; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Error Pointer value can't be chaanged</span>
+
+</code></pre>
+</div>
+
+<p>
+To easily understand this declarations please read from right to left.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgfcb6f04">
+<h2 id="orgfcb6f04">mutable</h2>
+</section>
+</section>
+<section>
+<section id="slide-org87e4855">
+<h2 id="org87e4855">constexpr</h2>
+<p>
+A constant expression is an expression whose value can't be changedand that can be evaluated at complile time.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org6695630">
+<h2 id="org6695630">operator overloading</h2>
+<p>
+  Overloaded operators are functions with special names. Like any other functionss they have parameter list,
+return type and function body.
+We can only apply operator overloading to user defined data types and  not to in built data types.
+Overloaded operators have same priority and associavity.
+As these are normal functions with special name we can also call them directly.
+</p>
+
+<p>
+we should use operators with consistent with built in type. Return type should be compatible with return from 
+built in type. 
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #2aa1ae; background-color: #292e34;">// </span><span style="color: #2aa1ae; background-color: #292e34;">Both are equivalant </span>
+complex1 + complex2;
+
+<span style="color: #4f97d7; font-weight: bold;">operator</span>+<span style="color: #4f97d7;">(</span>complex1 , complex2<span style="color: #4f97d7;">)</span>;
+
+</code></pre>
+</div>
+</section>
+<section id="slide-org5484f7d">
+<h3 id="org5484f7d">Assignment operator</h3>
+</section>
+<section id="slide-org80c52df">
+<h3 id="org80c52df">Equality operator</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim>
+<span style="color: #ce537a; font-weight: bold;">bool</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">==</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">saledata</span> &amp;<span style="color: #7590db;">sale_lhs</span> , <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">saledata</span> &amp;<span style="color: #7590db;">sale_rhs</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #bc6ec5;">(</span>
+            sale_lhs.isbn<span style="color: #2d9574;">()</span> == sale_rhs.isbn<span style="color: #2d9574;">()</span> &amp;&amp;
+            sale_lhs.sold == sale_rhs.sold
+<span style="color: #bc6ec5;">)</span>
+<span style="color: #4f97d7;">}</span>
+
+<span style="color: #ce537a; font-weight: bold;">bool</span> <span style="color: #4f97d7; font-weight: bold;">operator</span><span style="color: #bc6ec5; font-weight: bold;">!=</span><span style="color: #4f97d7;">(</span><span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">saledata</span> &amp;<span style="color: #7590db;">sale_lhs</span>, <span style="color: #4f97d7; font-weight: bold;">const</span> <span style="color: #ce537a; font-weight: bold;">saledata</span> &amp;<span style="color: #7590db;">sale_rhs</span><span style="color: #4f97d7;">)</span>
+<span style="color: #4f97d7;">{</span>
+<span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #a45bad;">!</span><span style="color: #bc6ec5;">(</span>sale_lhs==sale_rhs<span style="color: #bc6ec5;">)</span>;
+
+<span style="color: #4f97d7;">}</span>
+
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgc5a4c61">
+<h3 id="orgc5a4c61">Increament and decrement</h3>
+<p>
+Its good practice do define both prefix and postfix operators for a class.
+</p>
+</section>
+<section id="slide-org573c670">
+<h4 id="org573c670">Prefix operator</h4>
+</section>
+<section id="slide-orga648fda">
+<h4 id="orga648fda">Postfix Operator</h4>
+<p>
+To distingush postfix operator we pass additoinal parameter to function as int.
+This parameter is just place holder or token for telling complier this is postfix operator.
+</p>
+</section>
+<section id="slide-org75b9de0">
+<h4 id="org75b9de0">Calling operators explicitly</h4>
+<p>
+Instead of using operator we can directly call operator function.
+</p>
+<div class="org-src-container">
+
+<pre  class="src src-C++"><code trim><span style="color: #ce537a; font-weight: bold;">Time</span> <span style="color: #7590db;">T1</span>;
+T1.<span style="color: #4f97d7; font-weight: bold;">operator</span>++<span style="color: #4f97d7;">(</span><span style="color: #a45bad;">0</span><span style="color: #4f97d7;">)</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Postfix</span>
+T1.<span style="color: #4f97d7; font-weight: bold;">operator</span>++<span style="color: #4f97d7;">()</span>; <span style="color: #2aa1ae; background-color: #292e34;">//</span><span style="color: #2aa1ae; background-color: #292e34;">Prefix</span>
+</code></pre>
+</div>
+
+</section>
+<section id="slide-orgadd409d">
+<h3 id="orgadd409d">Member access Operator</h3>
+</section>
+<section id="slide-org7a9730f">
+<h3 id="org7a9730f">Arrow operator</h3>
+<p>
+The overloaded arrow operator must return either pointer to class or an object
+of class type that has its own arrow operator.
+</p>
+
+</section>
+<section id="slide-org00deb6d">
+<h3 id="org00deb6d">Conversion Operator</h3>
+
+</section>
+</section>
+<section>
+<section id="slide-orgcc98fb6">
+<h2 id="orgcc98fb6">this keyword</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgcbded99">
+<h2 id="orgcbded99">object lifetime</h2>
+</section>
+</section>
+<section>
+<section id="slide-orge73423c">
+<h2 id="orge73423c">auto keyword</h2>
+</section>
+</section>
+<section>
+<section id="slide-orgafe03e2">
+<h2 id="orgafe03e2">Namespaces</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga3ab8a4">
+<h2 id="orga3ab8a4">Unions</h2>
+</section>
+</section>
+<section>
+<section id="slide-orga7479d9">
+<h2 id="orga7479d9">Why virtual destructors</h2>
+</section>
+</section>
+<section>
+<section id="slide-org006ee1f">
+<h2 id="org006ee1f">Casting</h2>
+</section>
+</section>
+<section>
+<section id="slide-org1a2cdc7">
+<h2 id="org1a2cdc7">Templates</h2>
+<div class="outline-text-2" id="text-org1a2cdc7">
+</div>
+</section>
+<section id="slide-org5385480">
+<h3 id="org5385480">Function Template</h3>
+<div class="org-src-container">
+
+<pre  class="src src-C"><code trim><span style="color: #bc6ec5;">#if</span><span style="color: #bc6ec5;">n</span><span style="color: #bc6ec5;">def</span> min
+<span style="color: #bc6ec5;">#define</span> <span style="color: #bc6ec5; font-weight: bold;">min</span><span style="color: #4f97d7;">(</span><span style="color: #7590db;">a</span>,<span style="color: #7590db;">b</span><span style="color: #4f97d7;">)</span> <span style="color: #4f97d7;">(</span><span style="color: #bc6ec5;">(</span><span style="color: #2d9574;">(</span>a<span style="color: #2d9574;">)</span> &lt; <span style="color: #2d9574;">(</span>b<span style="color: #2d9574;">)</span><span style="color: #bc6ec5;">)</span> ? <span style="color: #bc6ec5;">(</span>a<span style="color: #bc6ec5;">)</span> : <span style="color: #bc6ec5;">(</span>b<span style="color: #bc6ec5;">)</span><span style="color: #4f97d7;">)</span>
+<span style="color: #bc6ec5;">#endif</span>
+
+<span style="color: #4f97d7; font-weight: bold;">return</span> <span style="color: #4f97d7;">(</span>a&lt;b<span style="color: #4f97d7;">)</span> ? a : b;
+<span style="color: #e0211d; text-decoration: overline;">}</span>
+
+
+</code></pre>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgdfb7ff4">
+<h2 id="orgdfb7ff4">Advance Topics</h2>
+<div class="outline-text-2" id="text-orgdfb7ff4">
+</div>
+</section>
+<section id="slide-orgb4af3e9">
+<h3 id="orgb4af3e9">Return value optimization</h3>
+</section>
+<section id="slide-org470660b">
+<h3 id="org470660b">Copy elision</h3>
+</section>
+<section id="slide-org9781275">
+<h3 id="org9781275">RAII</h3>
+</section>
+</section>
+</div>
+</div>
+<script src="http://cdn.jsdelivr.net/reveal.js/3.0.0/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: 'c',
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'http://cdn.jsdelivr.net/reveal.js/3.0.0/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
